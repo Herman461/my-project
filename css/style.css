@@ -322,7 +322,9 @@ h6 {
     -ms-flex-align: center;
     align-items: center;
 }
-
+.banner {
+    display: block;
+}
 .banner_full {
     height: 100%;
 }
@@ -987,15 +989,9 @@ textarea.input::placeholder {
 }
 
 .bottom-footer__social {
-    display: block;
-    margin-bottom: 8px;
+    margin-bottom: 4px;
 }
 
-.bottom-footer__social img {
-    -o-object-fit: contain;
-    object-fit: contain;
-    height: 19px;
-}
 
 .bottom-footer__link {
     font-size: 12px;
@@ -1151,7 +1147,7 @@ textarea.input::placeholder {
     margin-bottom: 23px;
 }
 
-.header-article__share {
+.header-article__social {
     margin-bottom: 28px;
 }
 
@@ -1166,30 +1162,32 @@ textarea.input::placeholder {
     color: rgba(38, 38, 38, 0.5);
 }
 
-.share-article__label {
+.social__label {
     font-size: 16px;
     line-height: calc(22 / 16 * 100%);
     color: rgba(38, 38, 38, 0.5);
 }
 
-.share-article__items {
+.social__items {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    flex-wrap: wrap;
 }
 
-.share-article__item {
+.social__item {
     display: inline-block;
     margin-right: 13px;
+    margin-bottom: 4px;
 }
 
-.share-article__item svg {
+.social__item svg {
     fill: #90B1BD;
     height: 24px;
     width: 24px;
 }
 
-.share-article__item_tg svg {
+.social__item_tg svg {
     height: 20px;
     width: 20px;
 }
@@ -1943,7 +1941,7 @@ textarea.input::placeholder {
         padding-bottom: 84px;
     }
 
-    .share-article {
+    .social {
         display: -webkit-box;
         display: -ms-flexbox;
         display: flex;
@@ -1952,7 +1950,7 @@ textarea.input::placeholder {
         align-items: center;
     }
 
-    .share-article__label {
+    .social__label {
         margin-right: 25px;
     }
 
@@ -2245,7 +2243,7 @@ textarea.input::placeholder {
         font-size: calc(12px + 2 * ((100vw - 320px) / 1115));
     }
 
-    .share-article__label {
+    .social__label {
         font-size: calc(12px + 4 * ((100vw - 320px) / 1115));
     }
 
@@ -2486,6 +2484,16 @@ textarea.input::placeholder {
     }
 
     .side__more:last-child {
+        margin-bottom: 0;
+    }
+
+    .news-side__item {
+        display: none;
+    }
+    .news-side__item:nth-child(-n+5) {
+        display: block;
+    }
+    .news-side__item:nth-child(5) {
         margin-bottom: 0;
     }
 }
@@ -2796,7 +2804,7 @@ textarea.input::placeholder {
         padding: 0 1.5rem;
     }
 
-    .share-article__label {
+    .social__label {
         margin-bottom: 15px;
     }
 
